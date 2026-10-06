@@ -1,0 +1,203 @@
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            #181818 0%,
+            #080808 35%,
+            #000000 75%
+        );
+}
+
+
+/* =========================
+   FONTES
+========================= */
+
+.font-gothic {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+
+/* =========================
+   FUNDO
+========================= */
+
+.background-glow {
+    position: fixed;
+    width: 500px;
+    height: 500px;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    filter: blur(120px);
+    border-radius: 50%;
+
+    top: -180px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   FOTO / PERFIL
+========================= */
+
+.profile-circle {
+    width: 100px;
+    height: 100px;
+
+    border: 1px solid #555;
+    border-radius: 50%;
+
+    background: linear-gradient(
+        145deg,
+        #1c1c1c,
+        #050505
+    );
+
+    box-shadow:
+        0 0 30px rgba(255, 255, 255, 0.05),
+        inset 0 0 20px rgba(255, 255, 255, 0.04);
+
+    position: relative;
+}
+
+.profile-circle::before {
+    content: "";
+
+    position: absolute;
+
+    width: 108px;
+    height: 108px;
+
+    border: 1px solid #222;
+    border-radius: 50%;
+}
+
+.profile-circle span {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 28px;
+    font-weight: 600;
+
+    color: #e5e5e5;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   DIVISOR
+========================= */
+
+.divider {
+    width: 45px;
+    height: 1px;
+
+    background: #555;
+}
+
+
+/* =========================
+   BOTÕES
+========================= */
+
+.link-button {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    min-height: 62px;
+
+    padding: 0 18px;
+
+    border: 1px solid #292929;
+    border-radius: 4px;
+
+    background: rgba(15, 15, 15, 0.85);
+
+    color: #e5e5e5;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    letter-spacing: 1px;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.link-button:hover {
+    transform: translateY(-3px);
+
+    background: #151515;
+
+    border-color: #666;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.5),
+        0 0 15px rgba(255, 255, 255, 0.03);
+}
+
+
+/* =========================
+   ÍCONES
+========================= */
+
+.link-icon {
+    width: 28px;
+
+    font-size: 17px;
+
+    color: #aaa;
+
+    text-align: center;
+}
+
+.arrow {
+    color: #666;
+
+    transition:
+        transform 0.25s ease,
+        color 0.25s ease;
+}
+
+.link-button:hover .arrow {
+    color: #fff;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 480px) {
+
+    body {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .font-gothic {
+        font-size: 3rem;
+    }
+
+    .link-button {
+        min-height: 58px;
+    }
+}
